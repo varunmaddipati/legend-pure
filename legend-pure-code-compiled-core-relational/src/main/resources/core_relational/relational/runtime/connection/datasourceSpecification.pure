@@ -65,3 +65,13 @@ Class meta::pure::alloy::connections::alloy::specification::BigQueryDatasourceSp
     projectId:String[1];
     defaultDataset:String[1];
 }
+
+
+Class meta::pure::alloy::connections::alloy::specification::RedshiftDatasourceSpecification extends meta::pure::alloy::connections::alloy::specification::DatasourceSpecification
+{
+    clusterName:String[1];
+    region:String[1];
+    databaseName:String[1];
+    profile:String[1];
+}
+
