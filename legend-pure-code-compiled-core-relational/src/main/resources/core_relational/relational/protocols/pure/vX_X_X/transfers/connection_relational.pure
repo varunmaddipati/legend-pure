@@ -147,6 +147,12 @@ function meta::protocols::pure::vX_X_X::transformation::fromPureGraph::connectio
       b:meta::pure::alloy::connections::alloy::authentication::GCPApplicationDefaultCredentialsAuthenticationStrategy[1] |
          ^meta::protocols::pure::vX_X_X::metamodel::store::relational::connection::alloy::authentication::GCPApplicationDefaultCredentialsAuthenticationStrategy(
             _type = 'gcpApplicationDefaultCredentials'
+         ),
+      r:meta::pure::alloy::connections::alloy::authentication::RedshiftPublicAuthenticationStrategy[1] |
+         ^meta::protocols::pure::vX_X_X::metamodel::store::relational::connection::alloy::authentication::RedshiftPublicAuthenticationStrategy(
+            _type = 'redshiftPublic',
+            userName = $r.userName,
+            password = $r.password
          )
    ])->toOneMany())
 }
@@ -189,7 +195,16 @@ function meta::protocols::pure::vX_X_X::transformation::fromPureGraph::connectio
              _type = 'bigQuery',
              projectId = $b.projectId,
              defaultDataset = $b.defaultDataset
-         )
+         ),
+      r:meta::pure::alloy::connections::alloy::specification::RedshiftDatasourceSpecification[1] |
+          ^meta::protocols::pure::vX_X_X::metamodel::store::relational::connection::alloy::specification::RedshiftDatasourceSpecification(
+              _type = 'redshift',
+              clusterName = $r.clusterName,
+              clusterID = $r.clusterID,
+              region = $r.region,
+              port = $r.port,
+              databaseName = $r.databaseName
+          )
    ])->toOneMany())
 }
 
