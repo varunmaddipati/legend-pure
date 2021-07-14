@@ -207,9 +207,9 @@ function meta::protocols::pure::vX_X_X::transformation::fromPureGraph::connectio
               _type = 'redshift',
               clusterName = $r.clusterName,
               clusterID = $r.clusterID,
-              region = $r.region,
+              databaseName = $r.databaseName,
               port = $r.port,
-              databaseName = $r.databaseName
+              region = $r.region
           )
    ])->toOneMany())
 }

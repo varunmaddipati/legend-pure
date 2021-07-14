@@ -100,9 +100,9 @@ Class meta::protocols::pure::vX_X_X::metamodel::store::relational::connection::a
 {
     clusterName : String[1];
     clusterID : String[1];
-    region : String[1];
-    port : Integer[1];
     databaseName : String[1];
+    port : Integer[1];
+    region : String[1];
 }
 
 Class meta::protocols::pure::vX_X_X::metamodel::store::relational::connection::TestDatabaseConnection extends meta::protocols::pure::vX_X_X::metamodel::store::relational::connection::DatabaseConnection

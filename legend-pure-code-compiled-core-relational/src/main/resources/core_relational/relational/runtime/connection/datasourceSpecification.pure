@@ -71,8 +71,8 @@ Class meta::pure::alloy::connections::alloy::specification::RedshiftDatasourceSp
 {
     clusterName:String[1];
     clusterID:String[1];
-    region:String[1];
-    port:Integer[1];
     databaseName:String[1];
+    port:Integer[1];
+    region:String[1];
 }
 
